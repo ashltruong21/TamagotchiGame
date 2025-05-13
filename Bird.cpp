@@ -163,7 +163,7 @@ void Bird::fly() {
 }
 
 // Interaction where the bird solves a puzzle, increasing/decreasing values based on the puzzle-solving experience.  
-// edit, I made this a bit easier since I wasn't sure how to execute it. maybe it'll have to be capped by a certain # of times it's selected
+// edit: I changed this a bit & it has to be a cap of a certain # of times it's selected until it's no longer enjoyable for the bird
 void Bird::puzzleSolve() {
     if(bored_lvl >= 45 && hunger_lvl <= 30) {
         happy_lvl += 5;
@@ -339,7 +339,7 @@ void Bird::nextHour(int hours) {
     }
 }
 
-// Displays all stats, including both inherited and horse-specific variables.  
+// Displays all stats, including both inherited and other variables.  
 void Bird::DisplayStats() {
     Pet::DisplayStats();
     string divider = "─────── ♡ ──────";
